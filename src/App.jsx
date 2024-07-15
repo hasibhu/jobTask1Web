@@ -1,10 +1,12 @@
+import { Outlet } from "react-router-dom";
 import Login from "./components/Login";
 
 
 const App = () => {
   return (
     <div>
-      <Login></Login>
+      {/* <Login></Login> */}
+      <Outlet></Outlet>
     </div>
   );
 };

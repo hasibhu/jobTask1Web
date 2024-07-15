@@ -1,14 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
         <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">
-                       Welcome to Bikash 
-                    </p>
+                    <p className="py-6 text-5xl  text-center">Welcome to Bikash</p>
+                    <h1 className="text-3xl  text-center font-bold">Login now!</h1>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form className="card-body">
@@ -28,8 +27,14 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">
+                                <Link to='/dashboard'>Login</Link>
+                            </button>
                         </div>
+                        <hr className='mt-4 mb-4' />
+                        <h1 className='text-center'>Do not have an account? <span className='text-purple-600'>
+                            <Link to={'/register'}>Register</Link>
+                        </span> Here</h1>
                     </form>
                 </div>
             </div>
