@@ -1,16 +1,12 @@
-
-
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../hooks/useAxiosPublic';
 
 
-
 const Register = () => {
     // const { createUser, updateUserProfile } = UseAuth();
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
    
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
@@ -23,7 +19,7 @@ const Register = () => {
             phoneNumber: data.phoneNumber,
             password: data.password,
             role: 'user',
-            status: 'pending',   
+            status: 'pending',
         }
         console.log(userInfo);
 
@@ -43,13 +39,9 @@ const Register = () => {
                 }
             })
 
-    }   
+    };  
                             
-                        
-
-
-
-
+                    
     return (
         // <div className="hero min-h-screen mx-auto bg-base-200">
         <div className="hero min-h-screen " >
@@ -70,8 +62,6 @@ const Register = () => {
                             <input type="text" {...register("name", { required: true })} placeholder="Name" className="input input-bordered" />
                             {errors.name && <span className='text-red-600'>This field is required</span>}
                         </div>
-
-                        
 
                         {/* email  */}
                         <div className="form-control">
@@ -104,17 +94,11 @@ const Register = () => {
                             {errors.password && <span className='text-red-600'>This field is required</span>}
                         </div>
 
-                      
-
-                        
-
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Register" />
                         </div>
 
                     </form>
-
-
 
                     <div>
 
