@@ -126,7 +126,7 @@ const AgentTransactionManagement = () => {
     };
 
     if (!requests || requests.length === 0) {
-        return <div className='flex justify-center items-center text-4xl text-green-600 mt-32 bg-gradient-to-b from-fuchsia-900 to-slate-800'>Loading...</div>;
+        return <div className='flex justify-center items-center text-7xl font-extrabold text-red-600 mt-32 '><span className="loading loading-spinner loading-lg"></span></div>;
     }
 
     return (
@@ -149,11 +149,11 @@ const AgentTransactionManagement = () => {
                     <tbody className=' w-full' >
                         {requests.map((request) => (
                             <tr key={request._id} className='text-center'>
-                                <td className="px-2 py-1">{request.userPhoneNumber}</td>
-                                <td className="px-2 py-1">{request.amount}</td>
-                                <td className="px-2 py-1">{request.date}</td>
-                                <td className="px-2 py-1">{request.type}</td>
-                                <td className="px-2 py-1 flex justify-center gap-1">
+                                <td className="px-3 py-1">{request.userPhoneNumber}</td>
+                                <td className="px-3 py-1">{request.amount}</td>
+                                <td className="px-3 py-1">{request.date}</td>
+                                <td className="px-3 py-1">{request.type}</td>
+                                <td className="px-3 py-1 flex justify-center gap-1">
                                     <button
                                         className='flex flex-col justify-center items-center'
                                         onClick={() => handleAccept(request)}
