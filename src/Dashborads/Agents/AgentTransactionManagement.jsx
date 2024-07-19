@@ -3,6 +3,7 @@ import { MdCancel } from "react-icons/md";
 import { FaCheckSquare } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
+import ReturnButton from '../../components/ReturnButton'
 
 const AgentTransactionManagement = () => {
     const [requests, refetch] = useAllCashRequest();
@@ -126,9 +127,12 @@ const AgentTransactionManagement = () => {
 
     return (
         <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white '>
+            <div className='flex flex-initial'>
+                <ReturnButton ></ReturnButton>
+            </div>
             <h1 className='text-center mb-4'>Transaction Requests ({requests.length})</h1>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table  w-full">
                     <thead className=' w-full'>
                         <tr className='text-center text-white'>
                             <th className="px-2 py-1">Receiver</th>
