@@ -1,11 +1,37 @@
-import axios from "axios";
 
-const axiosPublic = axios.create({
-    baseURL: 'http://localhost:3001/'
-})
+// // useAxiosPublic.js
+// import axios from "axios";
+
+// const axiosPublic = axios.create({
+//     baseURL: 'http://localhost:3001/'
+// });
+
+// const useAxiosPublic = () => {
+//     return axiosPublic;
+// };
+
+// export default useAxiosPublic;
+
+
+import axios from 'axios';
 
 const useAxiosPublic = () => {
-    return axiosPublic;
+    const instance = axios.create({
+        baseURL: 'http://localhost:3001', // Adjust base URL as needed
+    });
+
+    instance.interceptors.request.use(
+        config => {
+            const token = localStorage.getItem('token');
+            if (token) {
+                config.headers['Authorization'] = `Bearer ${token}`; // Add 'Bearer' prefix
+            }
+            return config;
+        },
+        error => Promise.reject(error)
+    );
+
+    return instance;
 };
 
 export default useAxiosPublic;

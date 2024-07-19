@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
 import Login from "./components/Login";
+import Dashboard from "./Dashborads/Dashboard";
 
 
 const App = () => {
   return (
     <div>
-      {/* <Login></Login> */}
-      <Outlet></Outlet>
+      
+      {/* <Outlet></Outlet> */}
     </div>
   );
 };
