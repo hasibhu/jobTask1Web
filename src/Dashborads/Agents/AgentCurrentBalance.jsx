@@ -35,7 +35,7 @@ const AgentCurrentBalance = () => {
 
     return (
         <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto text-white h-[350px] rounded-xl'>
-            <div className='flex flex-initial'>
+            <div className='flex flex-initial mb-10'>
                 <ReturnButton></ReturnButton>
             </div>
             <h1 className='text-center text-4xl pb-9'> Your   Current Balance</h1>
