@@ -135,7 +135,6 @@ const AgentTransactionManagement = () => {
                             <th className="px-2 py-1">Amount</th>
                             <th className="px-2 py-1">Date</th>
                             <th className="px-2 py-1">Type</th>
-                            <th className="px-2 py-1">Status</th>
                             <th className="px-2 py-1">Actions</th>
                         </tr>
                     </thead>
@@ -146,7 +145,6 @@ const AgentTransactionManagement = () => {
                                 <td className="px-2 py-1">{request.amount}</td>
                                 <td className="px-2 py-1">{request.date}</td>
                                 <td className="px-2 py-1">{request.type}</td>
-                                <td className="px-2 py-1">{request.status}</td>
                                 <td className="px-2 py-1 flex justify-center gap-1">
                                     <button
                                         className='flex flex-col justify-center items-center'
