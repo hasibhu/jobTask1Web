@@ -129,7 +129,7 @@ const AgentTransactionManagement = () => {
             <h1 className='text-center mb-4'>Transaction Requests ({requests.length})</h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
-                    <thead>
+                    <thead className=' w-full'>
                         <tr className='text-center text-white'>
                             <th className="px-2 py-1">Receiver</th>
                             <th className="px-2 py-1">Amount</th>
@@ -139,7 +139,7 @@ const AgentTransactionManagement = () => {
                             <th className="px-2 py-1">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className=' w-full' >
                         {requests.map((request) => (
                             <tr key={request._id} className='text-center'>
                                 <td className="px-2 py-1">{request.userPhoneNumber}</td>
