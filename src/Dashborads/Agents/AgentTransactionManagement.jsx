@@ -149,11 +149,11 @@ const AgentTransactionManagement = () => {
                     <tbody className=' w-full' >
                         {requests.map((request) => (
                             <tr key={request._id} className='text-center'>
-                                <td className="px-3 py-1">{request.userPhoneNumber}</td>
-                                <td className="px-3 py-1">{request.amount}</td>
-                                <td className="px-3 py-1">{request.date}</td>
-                                <td className="px-3 py-1">{request.type}</td>
-                                <td className="px-3 py-1 flex justify-center gap-1">
+                                <td className="px-1 py-1">{request.userPhoneNumber}</td>
+                                <td className="px-1 py-1">{request.amount}</td>
+                                <td className="px-1 py-1">{request.date}</td>
+                                <td className="px-1 py-1">{request.type}</td>
+                                <td className="px-1 py-1 flex justify-center gap-1">
                                     <button
                                         className='flex flex-col justify-center items-center'
                                         onClick={() => handleAccept(request)}
