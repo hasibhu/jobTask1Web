@@ -125,7 +125,7 @@ const AgentTransactionManagement = () => {
     };
 
     return (
-        <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white p-4'>
+        <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white '>
             <h1 className='text-center mb-4'>Transaction Requests ({requests.length})</h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
