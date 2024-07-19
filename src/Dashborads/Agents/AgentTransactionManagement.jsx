@@ -125,6 +125,10 @@ const AgentTransactionManagement = () => {
         }
     };
 
+    if (!requests || requests.length === 0) {
+        return <div className='flex justify-center items-center text-4xl text-green-600 mt-32 bg-gradient-to-b from-fuchsia-900 to-slate-800'>Loading...</div>;
+    }
+
     return (
         <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white '>
             <div className='flex flex-initial'>

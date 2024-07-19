@@ -35,7 +35,7 @@ const Dashboard = () => {
     }, [navigate, axiosPublic]);
 
     if (!userRole) {
-        return <div className='flex justify-center items-center'>Loading...</div>;
+        return <div className='flex justify-center items-center text-4xl text-green-600 mt-32'>Loading...</div>;
     }
     const handleLogOut = () => {
         logout();
