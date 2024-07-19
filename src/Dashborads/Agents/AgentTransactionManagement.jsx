@@ -138,7 +138,7 @@ const AgentTransactionManagement = () => {
             <div className="overflow-x-auto">
                 <table className="table  w-full">
                     <thead className=' w-full'>
-                        <tr className='text-center text-white'>
+                        <tr className='text-center text-xl font-bold text-white'>
                             <th className="px-2 py-1">Receiver</th>
                             <th className="px-2 py-1">Amount</th>
                             <th className="px-2 py-1">Date</th>
@@ -153,7 +153,7 @@ const AgentTransactionManagement = () => {
                                 <td className="px-1 py-1">{request.amount}</td>
                                 <td className="px-1 py-1">{request.date}</td>
                                 <td className="px-1 py-1">{request.type}</td>
-                                <td className="px-1 py-1 flex justify-center gap-1">
+                                <td className="px-1 py-1 flex justify-center gap-2">
                                     <button
                                         className='flex flex-col justify-center items-center'
                                         onClick={() => handleAccept(request)}
