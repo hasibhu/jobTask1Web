@@ -134,7 +134,7 @@ const AgentTransactionManagement = () => {
             <div className='flex flex-initial'>
                 <ReturnButton ></ReturnButton>
             </div>
-            <h1 className='text-center mb-4'>Transaction Requests ({requests.length})</h1>
+            <h1 className='text-center text-2xl font-serif mb-4'>Transaction Requests ({requests.length})</h1>
             <div className="overflow-x-auto">
                 <table className="table  w-full">
                     <thead className=' w-full'>
