@@ -125,12 +125,12 @@ const AgentTransactionManagement = () => {
         }
     };
 
-    if (!requests || requests.length === 0) {
+    if (!requests ) {
         return <div className='flex justify-center items-center text-7xl font-extrabold text-red-600 mt-32 '><span className="loading loading-spinner loading-lg"></span></div>;
     }
 
     return (
-        <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white '>
+        <div className='bg-gradient-to-b from-fuchsia-900 to-slate-800 lg:w-[576px] mx-auto rounded-xl text-white pb-10'>
             <div className='flex flex-initial'>
                 <ReturnButton ></ReturnButton>
             </div>
@@ -148,7 +148,7 @@ const AgentTransactionManagement = () => {
                     </thead>
                     <tbody className=' w-full' >
                         {requests.map((request) => (
-                            <tr key={request._id} className='text-center'>
+                            <tr key={request._id} className='text-center '>
                                 <td className="px-1 py-1">{request.userPhoneNumber}</td>
                                 <td className="px-1 py-1">{request.amount}</td>
                                 <td className="px-1 py-1">{request.date}</td>

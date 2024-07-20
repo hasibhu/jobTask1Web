@@ -7,9 +7,9 @@ const Header = () => {
     
 
     return (
-        <div className="bg-blue-500  lg:w-[576px] mx-auto rounded-xl flex flex-col justify-center items-center ">
+        <div className="bg-blue-500  lg:w-[576px] h-[100px] mx-auto rounded-xl flex flex-col justify-center items-center ">
             <img className='w-12 h-12' src={logo} alt="" />
-            <h1 className="text-center">Taka</h1>
+            <h1 className="text-center text-4xl font-serif font-bold">TaKa</h1>
             
         </div>
     );
