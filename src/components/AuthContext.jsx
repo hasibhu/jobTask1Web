@@ -4,17 +4,17 @@ import React, { createContext, useState, useEffect } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [userRole, setUserRole] = useState(null);
+    const [userId, setUserId] = useState(null);
 
     useEffect(() => {
-        const role = localStorage.getItem('userID');
-        if (role) {
-            setUserRole(role);
+        const id = localStorage.getItem('userID');
+        if (id) {
+            setUserId(id);
         }
     }, []);
 
     const login = (role) => {
-        setUserRole(role);
+        setUserId(role);
         localStorage.setItem('userRole', role);
     };
 
@@ -22,11 +22,16 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem('token');
         localStorage.removeItem('userID');
         localStorage.removeItem('userRole');
-        setUserRole(null);
+        setUserId(null);
+    };
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toISOString().split('T')[0];
     };
 
     return (
-        <AuthContext.Provider value={{ userRole, login, logout }}>
+        <AuthContext.Provider value={{ userId, login, logout, formatDate }}>
             {children}
         </AuthContext.Provider>
     );

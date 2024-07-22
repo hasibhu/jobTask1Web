@@ -3,10 +3,10 @@ import { MdCancel } from "react-icons/md";
 import { FaCheckSquare } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
-import ReturnButton from '../../components/ReturnButton'
+import ReturnButton from '../../components/ReturnButton';
 
 const AgentTransactionManagement = () => {
-    const [requests, refetch] = useAllCashRequest();
+    const [requests, refetch] = useAllCashRequest(); //todo: filter only agent id specifice requests
     const axiosPublic = useAxiosPublic();
 
 

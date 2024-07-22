@@ -17,7 +17,7 @@ import axios from 'axios';
 
 const useAxiosPublic = () => {
     const instance = axios.create({
-        // baseURL: 'http://localhost:3001', // Adjust base URL as needed
+        // baseURL: 'http://localhost:3001' // Adjust base URL as needed
         baseURL: 'https://job-task1-server-6yyr.vercel.app', // Adjust base URL as needed
     });
 
